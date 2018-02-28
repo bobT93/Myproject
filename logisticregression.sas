@@ -62,3 +62,14 @@ logistic
    model remiss (event='1')= li/ influence iplots; 
 run
 ;
+
+/*probability plots from logistic regression
+using the effectplot command*/
+
+ods graphics on;
+proc logistic data=Remission plots(only)=(oddsratio(range=clip));
+model remiss(event='1') = li / expb;
+oddsratio li;
+effectplot / noobs;
+run;
+ods graphics off;
