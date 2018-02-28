@@ -41,3 +41,10 @@ model bodyfat= age weight neck abdomen thigh forearm wrist/ tol vif collin;
 run;
 ods html close;
 
+/* Diagonistics of the model The model meets the gaussian assumption with QQ plot having a straight line.
+The residual data points are scattered having no pattern showing a constant variance in the residuals meeting the variance assumption
+Residuals shows a bell shaped
+Cooks d plot shows there is one outlier.
+The predicted values are close to the prediction line showing constant variation. */
+
+
